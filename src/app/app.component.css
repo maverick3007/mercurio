@@ -1,0 +1,16 @@
+.full {
+    /* This image will be displayed fullscreen */
+    background: url('assets/SportBack01.svg') no-repeat center center;
+
+    /* Ensure the html element always takes up the full height of the browser window */
+	min-height:100%;
+
+    position:fixed;
+    right:0;
+    left:0;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

@@ -1,0 +1,10 @@
+body {
+    /* This image will be displayed fullscreen */
+    background: url('assets/SportBack01.svg')  no-repeat center center;
+
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

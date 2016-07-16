@@ -1,0 +1,21 @@
+<div class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom:50px">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#">Mercurio</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <form [ngFormModel]="form" class="navbar-form navbar-right" role="search" (submit)="onSubmit(form.value)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" ngControl="username" placeholder="gebruikersnaam">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="paswoord" ngControl="password">
+                    </div>
+                    <button type="submit" [disabled]="!form.valid" class="btn btn-default">Sign In</button>
+                </form>
+            </div>
+        </center>
+    </div>
+</div>
