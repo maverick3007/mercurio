@@ -14,6 +14,7 @@ export class WelcomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    var test;
   }
 
 }
