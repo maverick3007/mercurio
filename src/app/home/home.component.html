@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+<app-nav-bar></app-nav-bar>
+<div class="full">
+    <div class="mainbox container">
+        <h1>{{organisation.name}}</h1>
+        <h4>Vragenlijsten</h4>
+        <app-form-status *ngFor="let form of organisation.formShorts" [formShort]="form"></app-form-status>
+    </div>
+</div>
