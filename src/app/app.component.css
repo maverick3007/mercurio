@@ -15,11 +15,6 @@
     background-size: cover;
 }
 
-.mainbox{
-    margin-top:60px;
-        background: rgb(250, 250, 250);
-    /* all other browsers */
-    background: rgba(250, 250, 250, 0.9);
-}
+
 
 
