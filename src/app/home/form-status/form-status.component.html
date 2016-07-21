@@ -1,0 +1,9 @@
+<div class="bs-callout bs-callout-primary">
+    <h4>{{formShort.title}}</h4>
+    <p>{{formShort.description}}</p>
+    <div style="text-align: right">
+        <button type="button"  class="btn btn-default">Raadplegen</button>
+        <button type="button" [disabled]="(formShort.status != 'open')" class="btn btn-primary" (click)="navToQuestions(formShort)">Invullen</button>
+        <!--<button type="button" [disabled]="(form.status != 'filledin')" class="btn btn-success">Doorsturen</button>-->
+    </div>
+</div>
