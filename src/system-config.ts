@@ -31,6 +31,8 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'ng2-file-upload',
+  'ng2-bootstrap',
 
   // App specific barrels.
   'app',
@@ -64,7 +66,9 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'ng2-file-upload': 'vendor/ng2-file-upload',
+    'ng2-bootstrap': 'vendor/ng2-bootstrap',
   },
   packages: cliSystemConfigPackages
 });
