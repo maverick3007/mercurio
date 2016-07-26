@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="mainbox container">
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-primary" (click)="goBack()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Terug naar overzicht</button>
+        </div>
+        <div class="col-md-6">
+            <h4>{{form.formTitle}}</h4>
+            <p>{{form.formDescription}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li *ngFor="let chapter of form.chapters" [class.active]="chapter == selectedChapter" role="presentation"><a (click)="selectChapter(chapter)">{{chapter.number}}-{{chapter.title}}</a></li>
+        </ul>
+    </div>
+    <div class="row" style="margin-top:20px">
+        <button (click)="send()" class="btn btn-success"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Opslaan</button>
+        <button (click)="resetForm()" class="btn btn-warning"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Ongedaan maken</button>
+    </div>
+    <div class="row" style="margin-top:20px">
+        
+        <div  *ngFor="let subchapter of selectedChapter.subChapters" class="panel panel-default">
+            <div class="panel-heading">{{subchapter.title}}</div>
+            <div class="panel-body">
+                <p>{{subchapter.description}}</p>
+                
+                    <div *ngFor="let question of subchapter.questions">
+                        <app-text-field [question]="question.textQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'text'"></app-text-field>
+                        <app-option-field [question]="question.optionQuestion" [id]="question.id" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'option'"></app-option-field>
+                        <app-multi-option-field [question]="question.multiOptionQuestion" [id]="question.id" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'multioptions'"></app-multi-option-field>
+                        <app-upload-field [question]="question.uploadQuestion" [id]="question.id" [caption]="question.caption" *ngIf="question.type == 'upload'"></app-upload-field>
+                        <app-integer-field [question]="question.integerQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'integer'"></app-integer-field>
+                        <app-subform [question]="question.formListQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'formquestion'"></app-subform>
+                        <div><p style="color:red">{{question.errorString}}</p></div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button (click)="send()" class="btn btn-success"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Opslaan</button>
+        <button (click)="resetForm()" class="btn btn-warning"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Ongedaan maken</button>
+    </div>
+</div>

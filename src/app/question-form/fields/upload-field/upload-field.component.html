@@ -1,0 +1,14 @@
+<div class="form-group" [class.has-error]="hasError">
+    <label>{{caption}}</label>
+    <input type="file"  ng2FileSelect [uploader]="uploader" *ngIf="!((question.fileName != null) || (uploader.isUploading))" [(value)]="selectedImageFile" />
+    <div *ngIf="uploader.isUploading">
+        upload voortgang:
+        <div class="progress" style="">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+        </div>
+    </div>
+    <div *ngIf="(question.fileName != null)">
+        <button (click)="download()" class="btn btn-primary">{{question.fileName}} <span class="glyphicon glyphicon-download" aria-hidden="true"></span></button>
+        <button (click)="clearFile()" class="btn btn-danger">verwijder file <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+    </div>
+</div>

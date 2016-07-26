@@ -19,7 +19,7 @@ export class FormStatusComponent implements OnInit {
   }
 
   navToQuestions(form) {
-        //this.router.navigate(['/QuestionFormChapter', { id: form.formId }]);
+        this.router.navigate(['/questionform', form.formId ]);
     }
 
 }

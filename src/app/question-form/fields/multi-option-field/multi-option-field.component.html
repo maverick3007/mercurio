@@ -1,0 +1,11 @@
+
+<div class="form-group">
+    <label>{{caption}}</label>
+    <div class="radio" *ngFor="let o of question.options">
+        <label>
+            <input type="checkbox" name="{{id}}" (change)="toggleSelection(o)" [checked]="(checkSelected(o))">
+            {{o}}
+        </label>
+    </div>
+
+</div>

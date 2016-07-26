@@ -10,6 +10,8 @@ import { appRouterProviders } from './app/app.routes';
 
 import { AuthenticationService} from './app/services/authentication.service';
 import { OrganisationService} from './app/services/organisation.service'
+import { QuestionService} from './app/services/question.service'
+import { DownloadService} from './app/services/download.service'
 
 if (environment.production) {
   enableProdMode();
@@ -18,6 +20,8 @@ if (environment.production) {
 bootstrap(AppComponent,  [
     appRouterProviders, HTTP_PROVIDERS, 
     provide(AuthenticationService, {useClass: AuthenticationService}),
-    provide(OrganisationService, {useClass: OrganisationService})
+    provide(OrganisationService, {useClass: OrganisationService}),
+    provide(QuestionService, {useClass: QuestionService}),
+    provide(DownloadService, {useClass: DownloadService})
 ]);
 

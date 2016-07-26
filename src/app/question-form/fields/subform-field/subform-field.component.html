@@ -1,0 +1,23 @@
+<label>{{caption}}</label>
+
+<div class="panel panel-default" *ngFor="let line of question.questions">
+    <div class="panel-body">
+
+        <div *ngFor="let question of line.answers">
+
+            <app-text-field [question]="question.textQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'text'"></app-text-field>
+            <app-option-field [question]="question.optionQuestion" [id]="question.id" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'option'"></app-option-field>
+            <app-multi-option-field [question]="question.multiOptionQuestion" [id]="question.id" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'multioptions'"></app-multi-option-field>
+            <app-upload-field [question]="question.uploadQuestion" [id]="question.id" [caption]="question.caption" *ngIf="question.type == 'upload'"></app-upload-field>
+            <app-integer-field [question]="question.integerQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'integer'"></app-integer-field>
+            <app-subform-field [question]="question.formListQuestion" [caption]="question.caption" [hasError]="!question.isValid" *ngIf="question.type == 'formquestion'"></app-subform-field>
+            <div><p style="color:red">{{question.errorString}}</p></div>
+        </div>
+        <div>
+            <button (click)="removeLine(line)" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Verwijderen</button>
+        </div>
+    </div>
+</div>
+<div>
+    <button (click)="addLine()" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Toevoegen</button>
+</div>

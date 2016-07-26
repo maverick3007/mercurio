@@ -41,6 +41,13 @@ const barrels: string[] = [
   'app/home/form-status',
   'app/navbars/nav-bar-component',
   'app/navbars/nav-bar',
+  'app/question-form',
+  'app/question-form/fields/text-field',
+  'app/question-form/fields/integer-field',
+  'app/question-form/fields/multi-option-field',
+  'app/question-form/fields/option-field',
+  'app/question-form/fields/upload-field',
+  'app/question-form/fields/subform-field',
   /** @cli-barrel */
 ];
 

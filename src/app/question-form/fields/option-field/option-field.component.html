@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label>{{caption}}</label>
+    <!--<select >
+        <option *ngFor="let o of question.options" [value]="o">{{o}}</option>
+    </select>-->
+
+    <div class="radio"  *ngFor="let o of question.options">
+        <label>
+            <input type="radio" name="{{id}}"  (click)="question.selectedOption = o" [checked]="(question.selectedOption == o)" >
+            {{o}}
+        </label>
+    </div>
+
+</div>
