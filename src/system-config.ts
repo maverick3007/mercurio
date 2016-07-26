@@ -33,6 +33,7 @@ const barrels: string[] = [
   'rxjs',
   'ng2-file-upload',
   'ng2-bootstrap',
+  'file-saver',
 
   // App specific barrels.
   'app',
@@ -69,6 +70,7 @@ System.config({
     'main': 'main.js',
     'ng2-file-upload': 'vendor/ng2-file-upload',
     'ng2-bootstrap': 'vendor/ng2-bootstrap',
+    'file-saver': 'vendor/file-saver'
   },
   packages: cliSystemConfigPackages
 });
