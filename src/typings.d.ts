@@ -5,3 +5,7 @@
 /// <reference path="../typings/browser.d.ts" />
 /// <reference path="../typings/globals/FileSaver/index.d.ts" />
 declare var module: { id: string };
+declare module 'filesaver' {
+    var saveAs: any;
+    export = saveAs;
+}

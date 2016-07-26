@@ -7,6 +7,7 @@ import {CustomBrowserXhr} from '../utilities/custom.xhr'
 
 
 
+
 @Injectable()
 export class DownloadService {
 
