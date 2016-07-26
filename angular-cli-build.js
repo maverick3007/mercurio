@@ -19,7 +19,8 @@ module.exports = function(defaults) {
       'ng2-file-upload/**/*.js',
       'ng2-bootstrap/**/*.js',
       'bootstrap/**/bootstrap.min.css',
-      'bootstrap/dist/fonts/**/*.*'
+      'bootstrap/dist/fonts/**/*.*',
+      'file-saver/**/*.js'
     ]
   });
 };

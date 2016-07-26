@@ -33,7 +33,7 @@ const barrels: string[] = [
   'rxjs',
   'ng2-file-upload',
   'ng2-bootstrap',
-  'file-saver',
+
 
   // App specific barrels.
   'app',
@@ -58,6 +58,8 @@ const cliSystemConfigPackages: any = {};
 barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
+cliSystemConfigPackages["file-saver"] = {main: 'FileSaver'};
+
 
 /** Type declaration for ambient System. */
 declare var System: any;
