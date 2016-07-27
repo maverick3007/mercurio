@@ -20,7 +20,8 @@ module.exports = function(defaults) {
       'ng2-bootstrap/**/*.js',
       'bootstrap/**/bootstrap.min.css',
       'bootstrap/dist/fonts/**/*.*',
-      'file-saver/**/*.js'
+      'file-saver/**/*.js',
+      'ng2-bs3-modal/**/*.js',
     ]
   });
 };

@@ -25,7 +25,6 @@ const barrels: string[] = [
   '@angular/forms',
   '@angular/http',
   '@angular/router',
-  '@angular/router-deprecated',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
 
@@ -33,6 +32,7 @@ const barrels: string[] = [
   'rxjs',
   'ng2-file-upload',
   'ng2-bootstrap',
+  'ng2-bs3-model',
 
 
   // App specific barrels.
@@ -72,7 +72,8 @@ System.config({
     'main': 'main.js',
     'ng2-file-upload': 'vendor/ng2-file-upload',
     'ng2-bootstrap': 'vendor/ng2-bootstrap',
-    'file-saver': 'vendor/file-saver'
+    'file-saver': 'vendor/file-saver',
+    'ng2-bs3-model': 'vendor/ng2-bs3-model'
   },
   packages: cliSystemConfigPackages
 });
