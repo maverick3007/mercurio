@@ -1,0 +1,11 @@
+<modal #modal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">Oeps</h4>
+    </modal-header>
+    <modal-body>
+        {{message}}
+    </modal-body>
+    <modal-footer [show-default-buttons]="false">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modal.dismiss()">OK</button>
+    </modal-footer>
+</modal>
