@@ -32,7 +32,7 @@ const barrels: string[] = [
   'rxjs',
   'ng2-file-upload',
   'ng2-bootstrap',
-  'ng2-bs3-model',
+  'ng2-bs3-modal',
 
 
   // App specific barrels.
@@ -51,6 +51,7 @@ const barrels: string[] = [
   'app/question-form/fields/option-field',
   'app/question-form/fields/upload-field',
   'app/question-form/fields/subform-field',
+  'app/modals/pop-error',
   /** @cli-barrel */
 ];
 
@@ -73,7 +74,7 @@ System.config({
     'ng2-file-upload': 'vendor/ng2-file-upload',
     'ng2-bootstrap': 'vendor/ng2-bootstrap',
     'file-saver': 'vendor/file-saver',
-    'ng2-bs3-model': 'vendor/ng2-bs3-model'
+    'ng2-bs3-modal': 'vendor/ng2-bs3-modal'
   },
   packages: cliSystemConfigPackages
 });

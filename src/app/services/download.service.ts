@@ -4,7 +4,7 @@ import {Injectable, provide} from '@angular/core';
 import { Observable }     from 'rxjs/Observable';
 import { Http, Response, Headers, BrowserXhr} from '@angular/http';
 import {CustomBrowserXhr} from '../utilities/custom.xhr';
-import {saveAs} from 'file-saver';
+
 
 
 

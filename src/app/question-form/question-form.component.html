@@ -16,7 +16,7 @@
             <li *ngFor="let chapter of form.chapters" [class.active]="chapter == selectedChapter" role="presentation"><a (click)="selectChapter(chapter)">{{chapter.number}}-{{chapter.title}}</a></li>
         </ul>
     </div>
-    <div class="row" style="margin-top:20px" style="z-index=100">
+    <div class="row" style="margin-top:20px" >
         <button (click)="send()" class="btn btn-success"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Opslaan</button>
         <button (click)="resetForm()" class="btn btn-warning"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> Ongedaan maken</button>
     </div>
